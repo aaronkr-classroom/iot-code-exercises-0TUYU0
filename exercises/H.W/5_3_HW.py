@@ -5,9 +5,9 @@ class SayDays:
         self.y = year
         self.m = month
         self.d = day
-        # 해당 연도가 윤년인지 판단 (4로 나누어 떨어지고 100으로 안 떨어지거나, 400으로 떨어짐)
+        # 해당 연도가 윤년인지 판단
         self.is_leap = (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)
-        # 월별 일수 리스트 (인덱스 맞추기 위해 0번은 0)
+        # 월별 일수 리스트
         self.month_days = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
         if self.is_leap:
             self.month_days[2] = 29
@@ -42,7 +42,6 @@ class SayDays:
         names = ["토요일", "일요일", "월요일", "화요일", "수요일", "목요일", "금요일"]
         return names[self.weekday()]
 
-# [조건 2] 프로그램 실행부
 while True:
     try:
         user_input = input("날짜를 입력하세요 (예: 2024 10 25, 종료: q): ")
@@ -51,7 +50,6 @@ while True:
             
         y, m, d = map(int, user_input.split())
         
-        # 객체 생성
         sd = SayDays(y, m, d)
         
         print(f"--- {y}년 {m}월 {d}일 정보 ---")
