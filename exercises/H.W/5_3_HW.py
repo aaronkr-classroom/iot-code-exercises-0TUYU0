@@ -22,7 +22,7 @@ class SayDays:
         year_total = 366 if self.is_leap else 365
         return year_total - self.days()
 
-    def weekday(self):
+    def week(self):
         """Zeller의 공식을 이용한 요일 숫자 (0:토, 1:일, ... 6:금)"""
         y, m, d = self.y, self.m, self.d
         # Zeller 공식: 1월, 2월 = 전년도 13월, 14월
@@ -37,10 +37,10 @@ class SayDays:
         h = (d + (13 * (m + 1)) // 5 + K + K // 4 + J // 4 - 2 * J) % 7
         return h
 
-    def weekday_name(self):
+    def week_name(self):
         """숫자 요일을 한글로 변환"""
         names = ["토요일", "일요일", "월요일", "화요일", "수요일", "목요일", "금요일"]
-        return names[self.weekday()]
+        return names[self.week()]
 
 while True:
     try:
@@ -55,11 +55,12 @@ while True:
         print(f"--- {y}년 {m}월 {d}일 정보 ---")
         print(f"1. 올해의 며칠째: {sd.days()}일")
         print(f"2. 올해 남은 일수: {sd.days_left()}일")
-        print(f"3. 요일 숫자(0:토): {sd.weekday()}")
-        print(f"4. 요일 이름: {sd.weekday_name()}")
+        print(f"3. 요일 숫자(0:토): {sd.week()}")
+        print(f"4. 요일 이름: {sd.week_name()}")
         print("-" * 30)
         
     except ValueError:
         print("숫자 3개를 공백으로 구분하여 입력해주세요 (예: 2024 1 1).")
     except Exception as e:
         print(f"오류 발생: {e}")
+
