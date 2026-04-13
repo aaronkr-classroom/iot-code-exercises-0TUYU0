@@ -5,7 +5,7 @@ i = 1
 
 while(i <= 50):
     if i % 3 != 0:
-        #print(i)
+        print(i)
         sum += i
     i += 1
 
