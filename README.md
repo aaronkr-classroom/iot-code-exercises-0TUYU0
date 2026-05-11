@@ -9,3 +9,8 @@ Repository for code and exercises
 ## 8장 실습 파일
 
 - [8장 link](https://wokwi.com/projects/463045687754179585)
+
+## 9장 실습 파일
+
+- [9장 link](https://wokwi.com/projects/463678089321381889)
+
