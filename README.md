@@ -12,7 +12,7 @@ Repository for code and exercises
 
 ## 9장 실습 파일
 
-- [9장 - 1 link](https://wokwi.com/projects/463678089321381889)
+- [9장 - DHT22 link](https://wokwi.com/projects/463678089321381889)
 - [9장 - BH1750 link](https://wokwi.com/projects/463684998155629569)
 - [9장 - DS18B20 link](https://wokwi.com/projects/463687134180797441)
 
